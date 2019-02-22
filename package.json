@@ -7,7 +7,6 @@
         "deploy": "webpack --mode=production",
         "postdeploy": "cp -r public/* dist/",
         "build": "webpack --mode=development",
-        
         "start": "webpack-dev-server --mode=development"
     },
     "author": "Thomaz T. O. Toyama <thomazot@gmail.com>",
