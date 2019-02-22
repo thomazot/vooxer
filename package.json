@@ -4,8 +4,9 @@
     "description": "",
     "main": "webpack.config.js",
     "scripts": {
+        "prevdeploy": "rm -rf deploy",
         "deploy": "webpack --mode=production",
-        "postdeploy": "cp -r public/* dist/",
+        "postdeploy": "cp -r public/* deploy/",
         "build": "webpack --mode=development",
         "start": "webpack-dev-server --mode=development"
     },

@@ -12,7 +12,7 @@ module.exports = (env,argv) => {
             app: glob.sync('./src/**/index.js')
         },
         output: {
-            path: mode == 'development' ? path.resolve(__dirname, './build') : path.resolve(__dirname, './dist'),
+            path: mode == 'development' ? path.resolve(__dirname, './build') : path.resolve(__dirname, './deploy'),
             filename: '[name].js'
         }
     };
