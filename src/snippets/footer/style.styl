@@ -1,0 +1,82 @@
+.footer 
+    background: #f2f5ff
+    border-top: solid 10px color_primary
+    margin-top: 25px
+    svg 
+        fill: color_primary
+    &__container 
+        { container }
+    &__title 
+        padding: 10px 0
+    &__paypal 
+        display: flex 
+        align-items: center
+        margin-bottom: 20px
+        font-size: 11px 
+        font-weight: 400 
+        text-transform: uppercase
+        color: #666
+        &-title 
+            max-width: 70px
+            margin-right: 10px
+    &__item 
+        padding: 5px 0 
+    &__link 
+        font-size: 14px
+        font-weight: 400 
+
+        color: #666
+
+        svg 
+            display: inline-block 
+            vertical-align: middle
+            margin-right: 10px 
+
+        &:hover 
+            color: color_primary
+    &__social 
+        &-list 
+            display: flex 
+            margin: 0 -10px
+        &-item 
+            padding: 0 10px 
+    &__plays 
+        display: flex 
+        padding: 20px 0 
+        margin: 0 -5px 
+        &-item 
+            margin: 0 5px
+
+.copyright 
+    font-size: 14px
+    font-weight: regular 
+    text-transform: uppercase
+    color: #666666
+    background: #f2f5ff
+    line-height: 40px
+    padding-top: 20px
+    &__container 
+        { container }
+        padding-top: 20px
+        padding-bottom: 20px
+        border-top: solid 1px #fff 
+
+.security 
+    &__list 
+        display: flex 
+        align-items: center
+        margin: 0 -10px 
+    &__item 
+        padding: 0 10px 
+
+@media (min-width: 992px)
+    .footer 
+        &__container 
+            display: flex 
+            justify-content: space-between
+            align-items: flex-start
+    .copyright 
+        &__container 
+            display: flex 
+            justify-content: space-between
+            align-items: center

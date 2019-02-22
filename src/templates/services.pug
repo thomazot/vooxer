@@ -1,0 +1,10 @@
+extends layout.pug 
+
+block vars 
+    -var page = 'services'
+    -var inner = true
+    -var banner = false
+
+block content 
+    include ../snippets/page/services.pug
+    include ../snippets/article/servicesInner.pug

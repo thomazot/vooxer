@@ -1,0 +1,92 @@
+form(action="")
+    .budget__form-name 
+        .title.title--h3 Produtos
+    .budget__div.budget__div--checkbox 
+        .form__item.form__item--checkbox
+            input#specification-201.form__checkbox-circle(type="checkbox", name="jh1")
+            label.form__label(for="specification-201") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Modelo Digital de Terreno (MDT) 
+        .form__item.form__item--checkbox
+            input#specification-202.form__checkbox-circle(type="checkbox", name="jh2")
+            label.form__label(for="specification-202") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Infravermelho (IR)
+        .form__item.form__item--checkbox
+            input#specification-203.form__checkbox-circle(type="checkbox", name="jh3")
+            label.form__label(for="specification-203") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Restituição Estereofotogramétrica (3D) 
+        .form__item.form__item--checkbox
+            input#specification-204.form__checkbox-circle(type="checkbox", name="jh4")
+            label.form__label(for="specification-204") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Mapa Hiperspectral 
+        .form__item.form__item--checkbox
+            input#specification-205.form__checkbox-circle(type="checkbox", name="jh5")
+            label.form__label(for="specification-205") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Modelo Digital de Superfície (MDS) 
+        .form__item.form__item--checkbox
+            input#specification-206.form__checkbox-circle(type="checkbox", name="jh6")
+            label.form__label(for="specification-206") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Vetorização (2D) 
+        .form__item.form__item--checkbox
+            input#specification-207.form__checkbox-circle(type="checkbox", name="jh7")
+            label.form__label(for="specification-207") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Mapa Hipsométrico 
+        .form__item.form__item--checkbox
+            input#specification-208.form__checkbox-circle(type="checkbox", name="jh8")
+            label.form__label(for="specification-208") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Ortofoto 
+        .form__item.form__item--checkbox
+            input#specification-209.form__checkbox-circle(type="checkbox", name="jh9")
+            label.form__label(for="specification-209") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Imagens Aéreas (Dados Brutos) 
+        .form__item.form__item--checkbox
+            input#specification-210.form__checkbox-circle(type="checkbox", name="jh10")
+            label.form__label(for="specification-210") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Curvas de Nível 
+    .budget__div.budget__div--inputs 
+        .budget__div-inner
+            .form__item.form__item--escala
+                label.form__label.form__label--show(for="f2m1") Escala
+                select#f2m1(name="")
+                    option(value="") Selecione
+            .form__item.form__item--gsd
+                label.form__label.form__label--show(for="f2m2") GSD
+                input#f2m2.form__input.form__input--text(type="text", placeholder="Digite", name="f2m2")
+            .form__item.form__item--area
+                label.form__label.form__label--show(for="f2m3") Tota da Área
+                input#f2m4.form__input.form__input--text.form__input--right(type="text", placeholder="0,00", name="f2m3")
+            .form__item.form__item--unidade
+                label.form__label.form__label--show(for="f2m4") Unidade
+                select#f2m4(name="")
+                    option(value="") Selecione
+            .form__item.form__item--estado
+                label.form__label.form__label--show(for="f2m5") Estado
+                select#f2m5(name="")
+                    option(value="") Selecione
+            .form__item.form__item--cidade
+                label.form__label.form__label--show(for="f2m6") Cidade
+                select#f2m6(name="")
+                    option(value="") Selecione
+    .budget__actions 
+        .form__actions 
+            .form__submit
+                button.button.button--action-invert Ver Preços 

@@ -1,0 +1,26 @@
+extends layoutServices.pug 
+
+block vars 
+    -var page = 'services'
+    -var inner = true
+    -var banner = false
+    -
+        var services = {
+            banner: '/assets/images/banner_obras.jpg',
+            title: 'Inspeções estruturais e monitoramento de obras',
+            description: 'Nesta página destacaremos as aplicações com uso de dados aéreos coletados por drones para uso no mercado de mineração.',
+            content: '<p>No setor de infraestrutura, os drones oferecem uma gama de produtos técnicos que auxiliam os gestores na tomada de decisões e monitoram o andamento de construções de todos os portes, reduzem custos em procedimentos de manutenção e inspeção de obras já realizadas.</p>',
+            list: [
+                "Cálculo de volume de execução de corte e aterro em obras",
+                "Levantamento topográfico para projetos de engenharia",
+                "Virtualização para monitoramento do ambiente de obras e seu andamento",
+                "Inspeção de obras de artes",
+                "Inspeção de estruturas de transmissão e distribuição de energia",
+                "Inspeção de torres de telecomunicações"
+            ],
+            pageBanner: '/assets/images/banner_page_obras.png'
+        }
+
+block content 
+    include ../snippets/page/servicesTemplate.pug
+    include ../snippets/article/servicesInner.pug

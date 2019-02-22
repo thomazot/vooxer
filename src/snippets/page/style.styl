@@ -1,0 +1,53 @@
+@import "../title/style.styl"
+
+.page 
+    box-before(#fff)
+    &__container 
+        { container }
+        padding-top: 50px 
+    &__content 
+        &--services
+            max-width: 440px
+        &--std 
+            font-size: 15px
+            font-weight: regular 
+            color: #333333
+            line-height: 1.2
+            p + p 
+                margin-top: 20px 
+            div 
+                margin: 30px 0
+            h2
+                @extends .title
+                @extends .title--big
+
+            ul, ol 
+                padding-left: 35px 
+
+            li 
+                position: relative 
+                line-height: 20px
+                &:before 
+                    content: ''
+                    position: absolute 
+                    top: 5px
+                    left: -25px
+                    width: 10px 
+                    height: 10px 
+                    border-radius: 50% 
+                    background: color_secondary
+                + li 
+                    margin-top: 20px
+
+@media (min-width: 992px)
+    .page 
+        &__container 
+            display: flex 
+            justify-content: space-between
+        &__content 
+            flex: 1 1 auto
+        &__banner 
+            flex: 0 0 50%
+            margin-top: -200px
+            position: relative 
+            z-index 50

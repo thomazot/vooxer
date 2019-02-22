@@ -1,0 +1,38 @@
+form(action="")
+    
+    .budget__div.budget__div--inputs 
+        .budget__div-inner
+            .form__item.form__item--produto
+                label.form__label.form__label--show(for="k01") Produto
+                input#k01.form__input.form__input--text(type="text", placeholder="Digite", name="k01")
+            .form__item.form__item--unidade
+                label.form__label.form__label--show(for="k04") Unidade
+                select#k04(name="")
+                    option(value="") Selecione
+            .form__item.form__item--area
+                label.form__label.form__label--show(for="k09") Tota da Área
+                input#k09.form__input.form__input--text.form__input--right(type="text", placeholder="0,00", name="k09")
+            .form__item.form__item--inspecao
+                label.form__label.form__label--show(for="k02") Tipo de Inspeção
+                select#k02(name="")
+                    option(value="") Selecione
+
+            .form__item.form__item--checkbox
+                input#k1.form__checkbox-circle(type="checkbox", name="k1")
+                label.form__label(for="k1") 
+                    span.form__icon 
+                        +svg('check', 14, 11)
+                    span Serviço Recorrente ?
+            
+            .form__item.form__item--estado
+                label.form__label.form__label--show(for="k05") Estado
+                select#k05(name="")
+                    option(value="") Selecione
+            .form__item.form__item--cidade
+                label.form__label.form__label--show(for="k06") Cidade
+                select#k06(name="")
+                    option(value="") Selecione
+    .budget__actions 
+        .form__actions 
+            .form__submit
+                button.button.button--action-invert Ver Preços 

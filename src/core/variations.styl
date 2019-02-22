@@ -1,0 +1,82 @@
+json('config.json')
+
+light = 300 
+regular = 400 
+medium = 500 
+semi-bold = 600 
+bold = 700 
+extra-bold = 800
+viewport = 1250px 
+
+container = @block {
+    width: 100%
+    max-width: viewport
+    padding: 0 25px 
+    margin: 0 auto
+}
+
+line(size, cor,  trans)
+    display: inline-block 
+    width: size
+    height: (size/5)
+    background: cor
+    border-radius: size
+    transition: trans
+
+box(cor) 
+    position: relative 
+    &:after 
+        content: ''
+        position: absolute 
+        top: calc(100% - 5px)
+        left: 0
+        width: 0 
+        height: 0 
+        border-left: solid 100vw cor 
+        border-bottom: solid 40px transparent 
+        border-top: solid 10px cor
+        @media (min-width: 992px)
+            border-bottom: solid 150px transparent
+
+box-before(cor) 
+    position: relative 
+    &:before 
+        content: ''
+        position: absolute 
+        bottom: calc(100% - 5px)
+        right: 0
+        width: 0
+        height: 0 
+        border-right: solid 100vw cor 
+        border-top: solid 40px transparent 
+        border-bottom: solid 10px cor
+        @media (min-width: 992px)
+            border-top: solid 150px transparent
+
+box-after(cor) 
+    position: relative 
+    &:after 
+        content: ''
+        position: absolute 
+        top: auto 
+        left: auto
+        bottom: 0
+        right: 0
+        width: 0
+        height: 0 
+        border-right: solid 100vw cor 
+        border-top: solid 40px transparent 
+        border-bottom: solid 10px cor
+        @media (min-width: 992px)
+            border-top: solid 150px transparent
+
+@keyframes animateOpenCenter 
+    0% 
+        left: 50%
+        top: 50%
+        opacity: 0 
+        visibility: hidden 
+        transform: translateX(-50%), translateY(-50%) scale(.9)
+    100% 
+        transform: translateX(-50%), translateY(-50%) scale(1)
+    

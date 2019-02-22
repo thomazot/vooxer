@@ -1,0 +1,111 @@
+passed  = color_secondary 
+current = color_primary 
+color   = #999999
+.steps
+    display: none 
+    &__list 
+        display: flex 
+        justify-content: space-between
+        padding-bottom: 20px
+
+    &__icon 
+        display: flex 
+        justify-content: center 
+        align-items: center 
+        height: 80px 
+        svg 
+            fill: color
+            max-width: 50%
+            width: 100% 
+        
+    &__name 
+        font-size: 12px 
+        font-weight: bold 
+        text-transform: uppercase
+        color: color 
+        max-width: 90px 
+        text-align: center 
+
+    &__border 
+        &:after 
+            content: ''
+            position: absolute 
+            top: 50% 
+            width: 30px 
+            height: 2px 
+            background: color
+            transform: translateY(-50%)
+            right: -30px
+        
+    &__step 
+        position: relative 
+        flex: 1 1 140px
+        min-width: 0
+        display: flex 
+        justify-content: center 
+        align-items: center 
+        padding: 20px 
+        box-shadow: 0px 2px 5px 0px rgba(51, 51, 51, 0.25)
+        margin: 15px 
+        border: solid 1px #fff
+
+        &:before, &:after  
+            content: ''
+            position: absolute 
+            top: 50%
+            width: 14px
+            height: 14px 
+            border-radius: 50%
+            background: color 
+            transform: translateY(-50%)
+
+        &:before 
+            left: -7px
+
+        &:after 
+            right: -7px
+        
+        &:first-child 
+            margin-left: 5px
+            &:before 
+                display: none 
+
+        &:last-child 
+            margin-right: 5px
+            &:after
+                display: none 
+            .steps__border:after 
+                display: none 
+
+        &--money 
+            .steps__name 
+                max-width: 55px
+
+        &[data-steps="passed"]
+            border-color: passed
+            &:after 
+                background: passed
+            .steps__border:after 
+                background: linear-gradient(to right, passed, current)
+            .steps__icon svg 
+                fill: passed
+            .steps__name 
+                color: passed
+        &[data-steps="current"]
+            border-color: current
+            &:before, &:after
+                background: current 
+            .steps__border:after
+                background: linear-gradient(to right, current, color)
+            .steps__icon svg 
+                fill: current
+            .steps__name 
+                color: current
+        
+
+@media (min-width: 992px)
+    .steps 
+        display: block 
+        &__step 
+            min-width: 140px 
+        

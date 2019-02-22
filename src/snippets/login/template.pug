@@ -1,0 +1,24 @@
+extends ../lightbox/template.pug
+
+block vars
+    - var id = "login"
+    
+block header 
+    h1.title.title--h1 ACESSAR PAINEL CLIENTE
+
+block main 
+    form.form(action="").login
+        .form__item
+            label.form__label(for="femail") endereço de e-mail
+            input#femail.form__input.form__input--email(type="email", placeholder="endereço de e-mail", name="femail")
+        .form__item 
+            label.form__label(for="fpass") senha
+            input#fpass.form__input.form__input--pass(type="password", placeholder="senha", name="fpass")
+        .form__item.form__item--checkbox
+            input#fremember.form__checkbox.form__checkbox--remember(type="checkbox", name="fremember")
+            label.form__label(for="fremember") Lembrar de mim 
+            button.form__show-pass(type="button", aria-controls="#fpass") exibir senha
+        .form__actions 
+            .form__submit
+                button.button.button--action Entrar 
+                a.link.link--none Esqueceu a senha ?

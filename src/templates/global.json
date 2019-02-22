@@ -1,0 +1,53 @@
+{
+    "name": "Vooxer",
+    "description": "o marketplace de serviços com drones.",
+    "menu": [
+        {
+            "name": "Home",
+            "slug": "home",
+            "link": "/"
+        },
+        {
+            "name": "Mídia",
+            "slug": "midia",
+            "link": "/midia.html"
+        },
+        {
+            "name": "Ajuda",
+            "slug": "help",
+            "link": "/help.html"
+        },
+        {
+            "name": "Contato",
+            "slug": "contact",
+            "link": "/contact.html"
+        }
+    ],
+    "dashboard": [
+        {
+            "name": "Área do Parceiro",
+            "slug": "partner",
+            "link": "/partner",
+            "lightbox": "lighboxPartner"
+        },{
+            "name": "Área do Cliente",
+            "slug": "customer",
+            "link": "/customer",
+            "lightbox": "login"
+        }
+    ],
+    "language": [
+        {
+            "name": "Brazil",
+            "slug": "BR"
+        },
+        {
+            "name": "Ingles",
+            "slug": "EN"
+        },
+        {
+            "name": "Spanish",
+            "slug": "ES"
+        }
+    ]
+}

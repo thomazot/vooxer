@@ -1,0 +1,93 @@
+.budget 
+    &__form 
+        padding: 0 0 25px
+        &-specification 
+            padding-top: 30px
+    &__accounts, &__services
+        background: #f2f5ff
+        padding: 20px 
+        margin: 0 -20px
+    &__services 
+        margin-bottom: -20px
+    &__plugins
+        margin: 0 -20px -20px
+        background: #f2f5ff
+        &-content 
+            padding: 0 20px 20px
+    &__socials 
+        display: flex 
+        justify-content: center 
+        align-items: center
+        svg 
+            fill: color_primary
+    &__social-item 
+        margin: 0 15px
+    .form__actions 
+        padding: 10px 0
+
+    &__content
+        .form__actions 
+            padding-top: 20px
+
+    &__div 
+        + .budget__div
+            border-top: solid 1px #c5c7cc
+            padding-top: 30px 
+            margin-top: 30px
+        &--checkbox 
+            column-count: 2
+            .form__item 
+                break-inside: avoid
+
+    &__form-specification
+        display: none 
+
+@media (min-width: 992px)
+    .budget 
+        &__accounts
+            display: flex 
+            margin: 0 -50px 
+            padding-bottom: 0
+        &__services 
+            padding: 20px 50px 
+            margin: 0 -50px -20px
+
+        &__form 
+            flex: 0 0 50%
+            padding: 0 30px 25px
+        &__plugins 
+            margin: 0 -50px -20px 
+            &-content 
+                padding: 0 50px 20px
+        &__actions 
+            .form
+                &__actions 
+                    display: flex 
+                    justify-content: flex-end
+                &__submit
+                    max-width: 308px
+                    flex: 0 0 308px
+        
+        &__div 
+            &--checkbox 
+                column-count: 3
+            &-inner
+                display: flex 
+                justify-content: space-between
+                flex-flow: row wrap
+                margin: 0 -10px
+                .form__item 
+                    flex: 1 1 auto
+                    padding: 10px 
+                    + .form__item:not(.form__item--checkbox):not(.form__item--checkbox-circle)
+                        margin-top: 0
+                    &--escala, &--estado 
+                        flex: 1 1 200px
+                    &--gsd 
+                        flex: 1 1 130px
+                    &--area
+                        flex: 1 1 140px
+                    &--unidade
+                        flex: 1 1 145px
+                    &--largura
+                        flex: 1 1 40%

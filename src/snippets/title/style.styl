@@ -1,0 +1,67 @@
+.title 
+    display: block 
+    padding: 10px 0
+    font-size: 24px 
+    font-weight: bold
+    text-transform: uppercase 
+    color: color_primary 
+    &--line 
+        display: flex 
+        justify-content: space-between
+        align-items: center 
+        &:before, &:after 
+            content: ''
+            height: 1px 
+            flex: 1 1 auto 
+            min-width: 0
+            background: color_primary
+        &:before 
+            margin-right: 10px 
+        &:after 
+            margin-left: 10px 
+    &--h2 
+        font-size: 14px
+    &--h3
+        font-size: 18px
+    &--big 
+        font-size: 22px;
+    &--detail 
+        position: relative 
+        line-height: 20px 
+        padding: 17px 0
+        margin-bottom: 10px
+        &:after 
+            content: ''
+            position: absolute 
+            bottom: 0 
+            left: 0 
+            width: 20px
+            height: 5px 
+            background: color_secondary
+    &--h4 
+        font-size: 13px 
+        font-weight: medium 
+        color: #999999
+        &.title
+            &--detail 
+                padding: 10px 0
+    &--h5 
+        font-size: 22px
+        font-weight: bold 
+        text-transform: uppercase 
+        color: color_secondary
+    &--h6 
+        font-size: 16px 
+    &--page 
+        color: #fff
+        line-height: 1.2
+        padding-top: 0
+        
+@media (min-width: 992px)
+    .title 
+        &--page 
+            font-size: 32px
+        &--h1 
+            font-size: 32px;
+
+

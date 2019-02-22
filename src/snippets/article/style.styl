@@ -1,0 +1,88 @@
+.article 
+    &--services
+        box-before(#fff)
+        background: #fff
+        &-inner 
+            box-before(#f2f5ff)
+            background: #f2f5ff
+            margin-top: 200px
+
+    &--midia
+        box-before(#f2f5ff)
+        background: #f2f5ff
+        margin-top: 100px
+        padding-bottom: 100px
+
+    &--video 
+        box-before(#f2f5ff)
+        background: #f2f5ff
+        margin-top: 200px
+        .article__content 
+            display: none 
+        .article__post 
+            position: relative 
+        .article__play 
+            position: absolute 
+            top: 50% 
+            left: 50% 
+            transform: translateX(-50%) translateY(-50%)
+            svg 
+                fill: #fff
+    &__header 
+        padding: 30px 0
+    &__item 
+        background: #fff 
+    &__container 
+        { container }
+    &__description 
+        font-size: 13px 
+        font-weight: regular 
+        color: #666666
+    &__image
+        box-shadow: 0px 2px 5px 0px rgba(0, 51, 255, 0.25)
+        border-radius: 2px 
+    &__list 
+        margin: -25px
+        .article__post 
+            margin: 25px 
+    &__post 
+        position: relative 
+    &__link--float
+        position: absolute 
+        top: 0 
+        left: 0
+        z-index: 10
+        width: 100% 
+        height: 100% 
+        background: rgba(0,0,0,0)
+    &__name + .article__data 
+        .title 
+            padding-top: 0
+            margin-top: -10px
+    &__footer 
+        padding: 20px 0 
+        text-align: center
+
+@media (min-width: 658px)
+    .article 
+        &__list 
+            display: grid 
+            grid-template-rows: 1fr 
+            grid-template-columns: repeat(2,1fr)
+
+@media (min-width: 992px)
+    .article 
+        &__post
+            border-radius: 0
+            transition: all .2s ease-in-out
+            &:hover 
+                box-shadow: 0 0 0 10px #fff, 0 0 0 11px color_primary
+                background: #fff
+                transform: scale(1.05)
+            
+
+        &__list 
+            grid-template-columns: repeat(3,1fr)
+
+        &__footer
+            padding-bottom: 180px

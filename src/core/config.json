@@ -1,0 +1,7 @@
+{
+    "color_primary": "#0033ff",
+    "color_secondary": "#00ff99",
+    "font_primary": "'Barlow', sans-serif",
+    "menu_button_size": "20px",
+    "menu_button_transition": ".3s"
+}

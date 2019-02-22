@@ -1,0 +1,29 @@
+form(action="")
+    
+    .budget__div.budget__div--inputs 
+        .budget__div-inner
+            .form__item.form__item--produto
+                label.form__label.form__label--show(for="p1") Produto
+                input#p1.form__input.form__input--text(type="text", placeholder="Digite", name="p1")
+            .form__item.form__item--unidade
+                label.form__label.form__label--show(for="p14") Unidade
+                select#p14(name="")
+                    option(value="") Selecione
+            .form__item.form__item--area
+                label.form__label.form__label--show(for="p12") Tota da Área
+                input#p12.form__input.form__input--text.form__input--right(type="text", placeholder="0,00", name="p12")
+            .form__item.form__item--filmagens
+                label.form__label.form__label--show(for="p19") Horas de Filmagens
+                input#p19.form__input.form__input--text.form__input--right(type="text", placeholder="0,00", name="p19")
+            .form__item.form__item--estado
+                label.form__label.form__label--show(for="p15") Estado
+                select#p15(name="")
+                    option(value="") Selecione
+            .form__item.form__item--cidade
+                label.form__label.form__label--show(for="p16") Cidade
+                select#p16(name="")
+                    option(value="") Selecione
+    .budget__actions 
+        .form__actions 
+            .form__submit
+                button.button.button--action-invert Ver Preços 

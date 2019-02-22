@@ -1,0 +1,24 @@
+extends layoutServices.pug 
+
+block vars 
+    -var page = 'services'
+    -var inner = true
+    -var banner = false
+    -
+        var services = {
+            banner: '/assets/images/banner_mineracao.jpg',
+            title: 'Mineração',
+            description: 'Nesta página destacaremos as aplicações com uso de dados aéreos coletados por drones para uso no mercado de mineração.',
+            content: '<p>Na mineração, o uso de drones traz muitas vantagens as empresas: reduzindo custos de alguns procedimentos, proporcionando informações mais precisas e relevantes a operação que apoiam na tomada de decisões.</p><p>Os dados aéreos são coletados com drones para geração de dados topográficos, análises e cálculos de volumes, monitoramento da produtividade e extração com uso de Modelo Digital de Terreno e virtualização do ambiente, além de outras aplicações destacadas a seguir:</p>',
+            list: [
+                "Análises de produtividades de extração",
+                "Cálculos de volumes de cavas",
+                "Monitoramento de avanços de lavras",
+                "Prospecção de novas áreas com uso de sensores específicos"
+            ],
+            pageBanner: '/assets/images/banner_page_mineracao.png'
+        }
+
+block content 
+    include ../snippets/page/servicesTemplate.pug
+    include ../snippets/article/servicesInner.pug

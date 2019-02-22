@@ -1,0 +1,101 @@
+form(action="")
+    .budget__form-name 
+        .title.title--h3 Produtos
+    .budget__div.budget__div--checkbox 
+        .form__item.form__item--checkbox
+            input#specification-11.form__checkbox-circle(type="checkbox", name="sp01")
+            label.form__label(for="specification-11") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Modelo Digital de Terreno (MDT) 
+        .form__item.form__item--checkbox
+            input#specification-12.form__checkbox-circle(type="checkbox", name="sp02")
+            label.form__label(for="specification-12") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Infravermelho (IR)
+        .form__item.form__item--checkbox
+            input#specification-13.form__checkbox-circle(type="checkbox", name="sp03")
+            label.form__label(for="specification-13") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Restituição Estereofotogramétrica (3D) 
+        .form__item.form__item--checkbox
+            input#specification-14.form__checkbox-circle(type="checkbox", name="sp04")
+            label.form__label(for="specification-14") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Mapa Hiperspectral 
+        .form__item.form__item--checkbox
+            input#specification-15.form__checkbox-circle(type="checkbox", name="sp05")
+            label.form__label(for="specification-15") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Modelo Digital de Superfície (MDS) 
+        .form__item.form__item--checkbox
+            input#specification-16.form__checkbox-circle(type="checkbox", name="sp06")
+            label.form__label(for="specification-16") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Vetorização (2D) 
+        .form__item.form__item--checkbox
+            input#specification-17.form__checkbox-circle(type="checkbox", name="sp07")
+            label.form__label(for="specification-17") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Mapa Hipsométrico 
+        .form__item.form__item--checkbox
+            input#specification-18.form__checkbox-circle(type="checkbox", name="sp08")
+            label.form__label(for="specification-18") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Ortofoto 
+        .form__item.form__item--checkbox
+            input#specification-19.form__checkbox-circle(type="checkbox", name="sp09")
+            label.form__label(for="specification-19") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Imagens Aéreas (Dados Brutos) 
+        .form__item.form__item--checkbox
+            input#specification-10.form__checkbox-circle(type="checkbox", name="sp10")
+            label.form__label(for="specification-10") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Curvas de Nível 
+    .budget__div.budget__div--inputs 
+        .budget__div-inner
+            .form__item.form__item--escala
+                label.form__label.form__label--show(for="g101") Escala
+                select#g101(name="")
+                    option(value="") Selecione
+            .form__item.form__item--gsd
+                label.form__label.form__label--show(for="g102") GSD
+                input#g102.form__input.form__input--text(type="text", placeholder="Digite", name="g102")
+            .form__item.form__item--area
+                label.form__label.form__label--show(for="g103") Tota da Área
+                input#g103.form__input.form__input--text.form__input--right(type="text", placeholder="0,00", name="g103")
+            .form__item.form__item--unidade
+                label.form__label.form__label--show(for="g104") Unidade
+                select#g104(name="")
+                    option(value="") Selecione
+            
+            .form__item.form__item--largura
+                label.form__label.form__label--show(for="g107") Largura da Faixa 
+                input#g107.form__input.form__input--text.form__input--right(type="text", placeholder="0,00", name="g107")
+
+            .form__item.form__item--extensao
+                label.form__label.form__label--show(for="g108") Extensão Total 
+                input#g108.form__input.form__input--text.form__input--right(type="text", placeholder="0,00", name="g108")
+
+            .form__item.form__item--estado
+                label.form__label.form__label--show(for="g105") Estado
+                select#g105(name="")
+                    option(value="") Selecione
+            .form__item.form__item--cidade
+                label.form__label.form__label--show(for="g106") Cidade
+                select#g106(name="")
+                    option(value="") Selecione
+    .budget__actions 
+        .form__actions 
+            .form__submit
+                button.button.button--action-invert Ver Preços 

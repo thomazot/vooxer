@@ -1,0 +1,16 @@
+- var vars
+header#header.header.header--inner
+    .header__container
+        .header__content
+            include ../logo/inner.pug
+            .header__actions
+                +link('primary', 'Faça seu Orçamento', '#partner', '#budget')
+            
+        include ../menu/template.pug
+    .header__banner-inner
+        include ../banner/not.pug
+        .header__inner 
+            .header__inner-container 
+                include ../breadcrumb/template.pug 
+                h1.title.title--h1.title--detail.title--page Mapeamento para Diversas Aplicações
+                p.text.text--description Nesta página destacaremos as aplicações com uso de dados aéreos coletados por drones para uso em corredores lineares.

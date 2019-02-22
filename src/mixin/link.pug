@@ -1,0 +1,20 @@
+include ./svg.pug 
+mixin link(slug, name, href, id) 
+    if (id)
+        a.link(class="link--"+slug, title=name, href=href, aria-controls=id, data-component="lightbox") 
+            if(slug == 'post-more')
+                .link__icon 
+                    +svg('more', 10, 9)
+            | #{ name }
+            if(slug == 'map')
+                .link__icon 
+                    +svg('map', 21, 32)
+    else 
+        a.link(class="link--"+slug, title=name, href=href) 
+            if(slug == 'post-more')
+                .link__icon 
+                    +svg('more', 10, 9)
+            | #{ name }
+            if(slug == 'map')
+                .link__icon 
+                    +svg('map', 21, 32)

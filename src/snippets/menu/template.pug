@@ -1,0 +1,16 @@
+nav#menu.menu(data-component="menu")
+    .menu__header
+        button(type="button", aria-expanded="false").menu__button
+            span.menu__lines menu
+        include ../language/template
+    .menu__main(aria-expanded="false")
+        ul.menu__list.menu__list--primary  
+            each item in menu
+                li.menu__item(class="menu__item--" + item.slug)
+                    a.menu__link(href=item.link, title=item.name) #{ item.name }
+        ul.menu__list.menu__list--dashboard 
+            each item in dashboard
+                li.menu__item(class="menu__item--" + item.slug)
+                    a.menu__link(href=item.link, title=item.name, data-component="lightbox",  aria-controls="#" + item.lightbox) #{ item.name }
+                
+

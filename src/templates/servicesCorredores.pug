@@ -1,0 +1,24 @@
+extends layoutServices.pug 
+
+block vars 
+    -var page = 'services'
+    -var inner = true
+    -var banner = false
+    -
+        var services = {
+            banner: '/assets/images/banner_diversas.jpg',
+            title: 'Mapeamento para corredores lineares',
+            description: 'Nesta página destacaremos as aplicações com uso de dados aéreos coletados por drones para uso em corredores lineares.',
+            content: '<p>No setor de infraestrutura, os drones oferecem a possibilidade de realização de mapeamento em corredores lineares (rodovias, ferrovias, dutovias, linhas de transmissão, distribuição, etc) para diversas finalidades. Custos com manutenção corretivas, projetos e obras, podem ser otimizados com o uso de drones em etapas predecessoras, que garante maior confiabilidade nas informações e projetos mais assertivos.</p>',
+            list: [
+                'Mapeamento para projetos de manutenção e implantação de rodovias, ferrovias, linhas de transmissão, distribuição e dutovias',
+                'Monitoramento de invasão de faixa de domínio e faixa de servidão',
+                'Mapeamento para análise das condições de pavimentos rodoviários e malha ferroviária (dormentes, trilhos, elementos de fixação, etc)',
+                'Estudos de traçados e projeto geométrico'
+            ],
+            pageBanner: '/assets/images/banner_page_corredores.png'
+        }
+
+block content 
+    include ../snippets/page/servicesTemplate.pug
+    include ../snippets/article/servicesInner.pug

@@ -1,0 +1,27 @@
+extends layoutServices.pug 
+
+block vars 
+    -var page = 'services'
+    -var inner = true
+    -var banner = false
+    -
+        var services = {
+            banner: '/assets/images/banner_agricultura.jpg',
+            title: 'Agricultura',
+            description: 'Mapeamentos para aplicações de agricultura de precisão, uso de sensores multispectrais para identificação de problemas na cultura e análises qualitativas e quantitativas de produtividade.',
+            content: '<p> Atualmente o uso de drones no mercado de agronegócios é uma realidade. Estima-se que 40% das aeronaves não tripuladas no Brasil são utilizado neste mercado, número este bem acima da média mundial. E os benefícios são muitos, onde o agricultor emprega a tecnologia na geração de informações que logo viram ações e melhoram o ambiente produtivo. Hoje possuímos diversas aplicações e não conseguimos ainda estimar quais outras aplicações virão em um futuro próximos, atualmente ofertamos diversos tipos de dados aéreos coletados a partir de drones para o agricultor, estando alguns destes destacados a seguir:</p>',
+            list: [
+                "Geração de dados para agricultura de precisão, onde são gerados mapas de precisão georreferenciados para análise e prevenção de falhas de plantio;",
+                "Análise da qualidade de adubação;",
+                "Geração de curvas de nível, mapas topográficos que nos permitem analisar o irrigamento ideal e análises do terreno;",
+                "Imagens RGB, multi e hiperespectrais que nos permitem avaliar o índice de saúde vegetal, índice de clorofila, ndvi, controle de pragas, etc",
+                "Geração de mapas de aplicação variável, acompanhamento e desenvolvimento da safra; ",
+                "Com drones pulverizados é possível fazermos pulverização pontual por meio do georreferenciamento das pragas;",
+                "Na pecuária é possível fazermos varredura de cerca (manutenção da cerca), verificação de pasto, vistoria de cabeças, georreferenciamento da área)"
+            ],
+            pageBanner: '/assets/images/banner_page_agricultura.png'
+        }
+
+block content 
+    include ../snippets/page/servicesTemplate.pug
+    include ../snippets/article/servicesInner.pug

@@ -1,0 +1,163 @@
+.menu 
+    &__header 
+        position: fixed 
+        right: 20px
+        top: 30px
+        z-index: 300
+        display: flex 
+        justify-content: flex-start 
+        align-items: flex-start
+        transition: all .2s ease-in-out
+    &__main 
+        position: fixed 
+        top: 0 
+        right: 0 
+        z-index: 200
+        width: 250px 
+        height: 100vh
+        max-width: 100% 
+        padding: 90px 40px 20px
+        background: color_primary
+        transform: translate3d(100%, 0, 0)
+        transition: all .3s ease
+        opacity: 0
+        visibility: hidden;
+        box-shadow: 200px 0 0 color_primary, 400px 0 0 color_primary, 600px 0 0 color_primary, 800px 0 0 color_primary
+        &[aria-expanded=true]
+            transform: translate3d(0,0,0)
+            opacity: 1 
+            visibility: visible
+    &__link 
+        display: block 
+        margin: 25px 0
+        font-size: 16px
+        font-weight: bold 
+        color: color_secondary
+        text-transform: uppercase 
+        &:hover 
+            color: #fff 
+    &__list 
+        &--primary 
+            .menu 
+                &__link 
+                    font-size: 32px 
+                    color: #fff 
+                    &:hover 
+                        color: color_secondary
+    &__button 
+        display: inline-block 
+        padding: (menu_button_size/2) (menu_button_size/4)
+        transition: .3s
+        cursor: pointer 
+        user-select: none 
+        border: 0
+        border-radius: 0
+        background: none 
+        font-size: 0
+        &:hover 
+            opacity: 1
+        &:active
+            transition: 0 
+            background: rgba(0,0,0,.1)
+
+    &__lines 
+        line(menu_button_size, color_secondary, menu_button_transition)
+        position: relative 
+        transition: background .3s .6s ease
+
+        &:before, &:after 
+            content: ''
+            line(menu_button_size, color_secondary, menu_button_transition)
+            width: (menu_button_size + 5px)
+            position: absolute 
+            right: 0
+            transform-origin: 50% 50%
+            transition: top .3s .6s ease, transform .3s ease;
+        &:before 
+            top: (menu_button_size/3)
+        &:after 
+            top: -(menu_button_size/3)
+        [aria-expanded=true] &
+            transition: background .3s 0s ease 
+            background: transparent 
+            &:before, &:after 
+                transition: top .3s ease, transform .3s .5s ease 
+                top: 0 
+                width: menu_button_size 
+            
+            &:before 
+                transform: rotate3d(0,0,1,45deg)
+            &:after 
+                transform: rotate3d(0,0,1,-45deg)
+
+[data-scrolling=true] 
+    .menu 
+        position: static 
+        transform: none 
+    .menu__main 
+        box-shadow: none 
+    .menu__header
+        top: 20px 
+
+@media (min-width: 992px)
+    .menu 
+        position: fixed 
+        top: 0 
+        left: 50% 
+        z-index: 100
+        width: 100% 
+        max-width: viewport
+        transform: translateX(-50%)
+
+    [data-scrolling=true] 
+        .menu
+            &__header
+                top: 38px 
+            &__button
+                opacity: 0 
+                visibility: hidden
+            &__main
+                top: 15px
+                right: 310px
+                left: 200px
+                z-index: 150
+                display: flex 
+                justify-content: flex-end
+                width: auto
+                height: auto
+                padding: 0
+                transform: none 
+                transition: none 
+                background: none 
+                opacity: 1 
+                visibility: visible
+                .menu
+                    &__list 
+                        flex: 1 1 auto
+                        min-width: 0
+                        display: flex 
+                        justify-content: space-around
+                        animation: logoMenu .5s 1 linear
+                        
+                        &--dashboard
+                            max-width: 350px
+                            order: -1
+                            .menu__link 
+                                margin-left: 20px
+                        &--primary 
+                            max-width: 310px
+                    &__link
+                        font-size: 13px
+                    &__item--home
+                        display: none 
+    [data-scrolling=false]
+        .menu__main:not([aria-expanded=true])
+            transition: none
+                        
+@keyframes logoMenu
+    0% 
+        opacity: 0 
+    50% 
+        opacity: 0 
+    100% 
+        opacity: 1

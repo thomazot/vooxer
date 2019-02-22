@@ -1,0 +1,26 @@
+extends layoutServices.pug 
+
+block vars 
+    -var page = 'services'
+    -var inner = true
+    -var banner = false
+    -
+        var services = {
+            banner: '/assets/images/banner_multifinalidades.jpg',
+            title: 'Takes Aéreos para Multifinalidades',
+            description: 'Imagens aéreas panorâmicas para diversas finalidades e videolfimagens de eventos em geral.',
+            content: '<p> As imagens aéreas geradas a partir de dones podem ser utilizadas em diversas aplicações, dentre as quais destacamos: cobertura de eventos, fotos panorâmicas, perícias, vigilância e segurança patrimonial, análise e detecção de mudanças em ambientes, time-lapse, análise e contagem de elementos (gado, pessoas, árvores, veículos, etc), manutenção de áreas de preservação ambiental e permanentes (APAs e APPs).</p>',
+            list: [
+                "Cobertura de eventos (casamentos, festivais, exposições, eventos esportivos, manifestações, etc)",
+                "Mercado imobiliário (vistoria de propriedades, levantamento de inventário, imóveis comerciais)",
+                "Publicidade (campanhas, divulgações, vídeos institucionais, comerciais, filmes)",
+                "Perícias de acidentes e atividades forenses",
+                "Segurança patrimonial em grandes áreas (fazendas, parques fabris, portos, etc)",
+                "Vistorias para seguradoras"
+            ],
+            pageBanner: '/assets/images/banner_page_multifinalidades.png'
+        }
+
+block content 
+    include ../snippets/page/servicesTemplate.pug
+    include ../snippets/article/servicesInner.pug

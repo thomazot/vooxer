@@ -1,1 +1,5 @@
-h1#logo.logo Logo
+div(itemprop, itemtype="http://schema.org/Store")#logo.logo
+    h1
+        span.logo__name(itemprop="name") #{ name }
+    +svg('logo', 369, 69)
+    span.logo__description(itemprop="description") #{ description }

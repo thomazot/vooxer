@@ -1,0 +1,13 @@
+block vars 
+
+section.lightbox(aria-hidden="true",id=id, class=id)
+    button.lightbox__background(aria-controls="#" + id, data-component="lightbox", type="button")
+    .lightbox__container
+        button.lightbox__close(aria-controls="#" + id, data-component="lightbox", type="button")
+            +svg('close')
+
+        .lightbox__inner
+            header.lightbox__header
+                block header
+            .lightbox__main 
+                block main 

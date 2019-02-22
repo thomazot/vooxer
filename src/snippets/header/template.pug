@@ -1,3 +1,9 @@
 header#header.header
     .header__container
-        include ../logo/template.pug
+        .header__content
+            include ../logo/template.pug
+            .header__actions
+                +link('primary-inverter', 'Seja um parceiro', '#partner', '#budget')
+                +link('primary', 'Faça seu Orçamento', '#partner', '#specification')
+        include ../menu/template.pug
+    include ../banner/full.pug

@@ -1,0 +1,59 @@
+.link 
+    display: inline-block 
+    padding: 5px 20px 
+    border-radius: 2px
+    font-size: 13px
+    font-weight: semi-bold 
+    text-transform: uppercase 
+    text-align: center 
+    line-height: 20px 
+
+    &--none 
+        color: color_primary
+        text-align: center
+        text-transform: none
+        width: 100%
+        font-weight: medium
+    &--primary 
+        background: color_primary 
+        color: lighten(color_primary, 100%)
+        &:hover 
+            background: #fff
+            color: color_primary
+
+        &-inverter 
+            background: lighten(color_primary, 100%)
+            color: color_primary
+            &:hover 
+                background: color_secondary 
+                color: lighten(color_primary, 100%)
+    &--map 
+        font-size: 12px
+        font-weight: bold 
+        color: #999999
+        .link__icon 
+            display: inline-block
+            vertical-align: middle
+            svg 
+                fill: color_primary
+            margin-left: 10px
+
+    &--post-more 
+        font-size: 13px
+        font-weight: bold 
+        color: color_primary 
+        line-height: 1
+        padding: 10px 0
+        .link__icon
+            display: inline-block 
+            vertical-align: middle 
+            margin-right: 7px
+            margin-top: -2px
+            svg 
+                fill: color_primary
+    
+@media (min-width: 992px)
+    .link 
+        padding: 10px 20px
+        &--post-more 
+            padding: 10px 0

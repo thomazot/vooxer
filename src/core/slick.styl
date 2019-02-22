@@ -1,0 +1,43 @@
+.slick-initialized 
+    &.slick
+        &-slider
+            display: flex 
+            justify-content: space-between
+            align-items: center
+            .slick
+                &-track
+                    min-width: 100% 
+                &-list 
+                    flex: 1 1 auto
+                    min-width: 0
+                &-arrow 
+                    position: relative 
+                    flex: 0 0 25px 
+                    width: 25px 
+                    height: 35px 
+                    border: 0
+                    font-size: 0 
+                    border-radius: 2px 
+                    display: flex 
+                    justify-content: center 
+                    align-items: center 
+                    &:after 
+                        content: ''
+                        background: #fff 
+                        position: absolute 
+                        top: 1px 
+                        bottom: 1px 
+                        left: 1px 
+                        right: 1px 
+                        border-radius: 2px
+                    svg 
+                        position: relative 
+                        z-index: 2
+                        fill: color_primary 
+                        width: 9px
+                        height: 15px
+                    
+                &-next 
+                    background: linear-gradient(to right, #e5e5e5, #fff)
+                &-prev 
+                    background: linear-gradient(to left, #e5e5e5, #fff)

@@ -1,0 +1,66 @@
+.logo
+    display: block 
+    width: 450px
+    max-width: 240px 
+    transition: all .2s ease-in-out
+    a 
+        display: inline-block
+    &__name 
+        display: none 
+    svg
+        fill: #fff
+        max-width: 194px
+        // transition: all .2s ease-in-out
+        [data-scrolling=true] &
+            max-width: 130px
+            animation: logoAnimate .5s 1 linear
+    
+    &--inner svg
+        max-width: 130px
+        animation: logoAnimate .5s 1 linear
+
+    &__description 
+        display: block
+        padding-left: 75px
+        font-size: 17px 
+        font-weight: medium
+        line-height: 1
+        text-shadow: 0 0 1px rgba(0,0,0,.5) 
+        color: #fff 
+        // transition: all .2s ease-in-out
+
+        [data-scrolling=true] & 
+            display: none 
+
+    &--inner 
+        .logo__description 
+            display: none 
+
+    @media (min-width: 500px)
+        max-width: 450px
+        svg
+            max-width: 369px
+        &__description 
+            font-size: 32px
+            padding-left: 132px
+
+@media (min-width: 500px)
+    .logo--inner svg
+        max-width: 130px
+
+@media (min-width: 992px)
+    [data-scrolling=true]
+        .logo svg
+                margin-top: 15px
+                max-width: 180px
+    .logo--inner svg 
+        margin-top: 0
+        max-width: 180px
+
+@keyframes logoAnimate 
+    0% 
+        opacity: 0 
+    50% 
+        opacity: 0 
+    100% 
+        opacity: 1

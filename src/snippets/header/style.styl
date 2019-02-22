@@ -1,0 +1,138 @@
+.header 
+    box(#000)
+    z-index: 300
+
+    &:before 
+        content: ''
+        position: fixed 
+        top: 0 
+        left: 0 
+        z-index: 100
+        width: 100%
+        height: 100px
+        max-height: 65px
+        opacity: 0 
+        visibility: visible
+        transition: all .2s ease-in-out
+        box-shadow: 0 0 10px rgba(0,0,0,.2)
+    
+    &__content 
+        position: absolute 
+        top: 50% 
+        left: 50% 
+        z-index: 200
+        transform: translateX(-50%) translateY(-50%)
+        transition: all .2s ease-in-out
+
+    &__banner-inner 
+        position: relative
+
+    &__actions 
+        text-align: center 
+        margin-top: 60px
+        .link 
+            min-width: 180px
+            margin: 5px 
+        [data-scrolling=true] &
+            visibility: hidden
+
+    [data-scrolling=true] &:before
+        background: color_primary
+        opacity: 1 
+        visibility: visible
+
+    &__inner 
+        { container }
+        position: absolute 
+        top: 50% 
+        left: 50% 
+        margin-top: -100px
+        transform: translateX(-50%) translateY(-50%)
+        &-container 
+            max-width: 480px
+
+    body.scrolling:not(.home) &:before
+        background: color_primary
+        opacity: 1 
+        visibility: visible
+
+
+.header--inner
+    position: static 
+    &:after 
+        display: none 
+    
+    .header__content
+        { container }
+        position: fixed
+        top: 8px
+        left: 50%
+        z-index: 150
+        transform: translateX(-50%)
+        height: 0
+
+    .header 
+        &__container 
+            position: fixed 
+            width: 100% 
+            max-width: viewport 
+            left: 50% 
+            z-index: 100
+            transform: translateX(-50%)
+        &__actions 
+            opacity: 0
+            visibility: hidden
+        
+
+[data-scrolling=true]
+    .header__content
+        { container }
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 150
+        transform: none 
+    
+    .header 
+        &__container 
+            position: fixed 
+            width: 100% 
+            max-width: viewport 
+            left: 50% 
+            z-index: 100
+            transform: translateX(-50%)
+
+
+@media (min-width: 992px)
+    .header 
+        &:before 
+            max-height: 100px
+        .link--primary 
+            transition: none 
+        &__actions 
+            [data-scrolling=true] &
+                margin-top: 0
+                visibility: visible 
+                .link--primary
+                    position: fixed 
+                    top: 25px 
+                    right: 100px
+                    border: solid 1px #00eaa7
+                    color: #00eaa7
+                    animation: logoButton .5s 1 linear
+                    &-inverter
+                        display: none 
+                        
+    [data-scrolling=true]
+        .header__actions 
+            opacity: 1
+            visibility: visible
+
+
+@keyframes logoButton
+    0% 
+        opacity: 0 
+    50% 
+        opacity: 0 
+    100% 
+        opacity: 1

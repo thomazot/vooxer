@@ -1,0 +1,24 @@
+extends ../lightbox/template.pug
+
+block vars
+    - var id = "lighboxPartner"
+    
+block header 
+    h1.title.title--h1 ACESSAR PAINEL PARCEIRO
+
+block main 
+    form.form(action="").login
+        .form__item
+            label.form__label(for="pfemail") endereço de e-mail
+            input#pfemail.form__input.form__input--email(type="email", placeholder="endereço de e-mail", name="femail")
+        .form__item 
+            label.form__label(for="pfpass") senha
+            input#pfpass.form__input.form__input--pass(type="password", placeholder="senha", name="fpass")
+        .form__item.form__item--checkbox
+            input#pfremember.form__checkbox.form__checkbox--remember(type="checkbox", name="fremember")
+            label.form__label(for="pfremember") Lembrar de mim 
+            button.form__show-pass(type="button", aria-controls="#pfpass") exibir senha
+        .form__actions 
+            .form__submit
+                button.button.button--action Entrar 
+                a.link.link--none Esqueceu a senha ?

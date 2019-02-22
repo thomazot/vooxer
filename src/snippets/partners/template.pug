@@ -1,0 +1,41 @@
+- 
+    var partners = [
+        {
+            "name": "dj",
+            "image": "/assets/images/dj.jpg"
+        },
+        {
+            "name": "nuvemuav",
+            "image": "/assets/images/nuvemuav.jpg"
+        },
+        {
+            "name": "mapfre",
+            "image": "/assets/images/mapfre.jpg"
+        },
+        {
+            "name": "dronee",
+            "image": "/assets/images/dronee.jpg"
+        },
+        {
+            "name": "droneng",
+            "image": "/assets/images/droneng.jpg"
+        },
+        {
+            "name": "sensormap",
+            "image": "/assets/images/sensormap.jpg"
+        }
+    ]
+.partners 
+    .partners__container 
+        header.partners__header
+            .partners__title
+                h1.title.title--h1 Principais parceiros
+        .partners__main
+            .partners__list
+                for partner in partners 
+                    .partners__item
+                        .partners__name #{ partner.name }
+                        figure.partners__figure
+                            img.partners__image(src=partner.image, alt=partner.name)
+
+        

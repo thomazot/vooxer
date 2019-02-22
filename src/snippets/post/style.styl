@@ -1,0 +1,20 @@
+.post 
+    position: relative 
+    z-index: 50
+    margin-top: -200px
+    margin-bottom: 100px
+    &__text 
+        font-size: 15px
+        font-weight: medium 
+        color: #666
+        padding: 30px 0
+        p + p 
+            margin-top: 20px 
+
+@media (min-width: 992px)
+    .post 
+        margin-top: -300px
+        &__time-share
+            display: flex 
+            justify-content: space-between
+            align-items: center 

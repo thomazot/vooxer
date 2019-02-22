@@ -1,0 +1,92 @@
+form(action="")
+    .budget__form-name 
+        .title.title--h3 Produtos
+    .budget__div.budget__div--checkbox 
+        .form__item.form__item--checkbox
+            input#specification-01.form__checkbox-circle(type="checkbox", name="sp01")
+            label.form__label(for="specification-01") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Modelo Digital de Terreno (MDT) 
+        .form__item.form__item--checkbox
+            input#specification-02.form__checkbox-circle(type="checkbox", name="sp02")
+            label.form__label(for="specification-02") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Infravermelho (IR)
+        .form__item.form__item--checkbox
+            input#specification-03.form__checkbox-circle(type="checkbox", name="sp03")
+            label.form__label(for="specification-03") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Restituição Estereofotogramétrica (3D) 
+        .form__item.form__item--checkbox
+            input#specification-04.form__checkbox-circle(type="checkbox", name="sp04")
+            label.form__label(for="specification-04") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Mapa Hiperspectral 
+        .form__item.form__item--checkbox
+            input#specification-05.form__checkbox-circle(type="checkbox", name="sp05")
+            label.form__label(for="specification-05") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Modelo Digital de Superfície (MDS) 
+        .form__item.form__item--checkbox
+            input#specification-06.form__checkbox-circle(type="checkbox", name="sp06")
+            label.form__label(for="specification-06") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Vetorização (2D) 
+        .form__item.form__item--checkbox
+            input#specification-07.form__checkbox-circle(type="checkbox", name="sp07")
+            label.form__label(for="specification-07") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Mapa Hipsométrico 
+        .form__item.form__item--checkbox
+            input#specification-08.form__checkbox-circle(type="checkbox", name="sp08")
+            label.form__label(for="specification-08") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Ortofoto 
+        .form__item.form__item--checkbox
+            input#specification-09.form__checkbox-circle(type="checkbox", name="sp09")
+            label.form__label(for="specification-09") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Imagens Aéreas (Dados Brutos) 
+        .form__item.form__item--checkbox
+            input#specification-10.form__checkbox-circle(type="checkbox", name="sp10")
+            label.form__label(for="specification-10") 
+                span.form__icon 
+                    +svg('check', 14, 11)
+                span Curvas de Nível 
+    .budget__div.budget__div--inputs 
+        .budget__div-inner
+            .form__item.form__item--escala
+                label.form__label.form__label--show(for="f01") Escala
+                select#f01(name="")
+                    option(value="") Selecione
+            .form__item.form__item--gsd
+                label.form__label.form__label--show(for="f02") GSD
+                input#f02.form__input.form__input--text(type="text", placeholder="Digite", name="f02")
+            .form__item.form__item--area
+                label.form__label.form__label--show(for="f03") Tota da Área
+                input#f04.form__input.form__input--text.form__input--right(type="text", placeholder="0,00", name="f03")
+            .form__item.form__item--unidade
+                label.form__label.form__label--show(for="f04") Unidade
+                select#f04(name="")
+                    option(value="") Selecione
+            .form__item.form__item--estado
+                label.form__label.form__label--show(for="f05") Estado
+                select#f05(name="")
+                    option(value="") Selecione
+            .form__item.form__item--cidade
+                label.form__label.form__label--show(for="f06") Cidade
+                select#f06(name="")
+                    option(value="") Selecione
+    .budget__actions 
+        .form__actions 
+            .form__submit
+                button.button.button--action-invert Ver Preços 

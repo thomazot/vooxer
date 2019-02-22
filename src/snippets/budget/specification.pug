@@ -1,0 +1,39 @@
+extends ../lightbox/template.pug
+
+block vars
+    - var id = "specification"
+    
+block header 
+    h1.title.title--h1 Faça um Orçamento 
+
+block main 
+    include ../steps/specification.pug
+    .budget__services 
+        .budget__title 
+            .title.title--h3 Serviços
+        .budget__content
+            form(action="#select")
+                select#specification-search(name="specification-search")
+                    option(value="") Selecione
+                    option(value="form01") Mineração
+                    option(value="form02") Agricultura
+                    option(value="form03") Mapeamento Topográfico
+                    option(value="form04") Mapeamento para Corredores Lineares
+                    option(value="form05") Fotos Panorâmicas
+                    option(value="form06") Video Filmagens
+                    option(value="form07") Inspeções Estruturais
+
+            #form01.budget__form-specification(aria-hidden="true")
+                include ./form01.pug
+            #form02.budget__form-specification(aria-hidden="true")
+                include ./form06.pug
+            #form03.budget__form-specification(aria-hidden="true")
+                include ./form07.pug
+            #form04.budget__form-specification(aria-hidden="true")
+                include ./form02.pug
+            #form05.budget__form-specification(aria-hidden="true")
+                include ./form03.pug
+            #form06.budget__form-specification(aria-hidden="true")
+                include ./form04.pug
+            #form07.budget__form-specification(aria-hidden="true")
+                include ./form05.pug

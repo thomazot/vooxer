@@ -1,0 +1,34 @@
+block vars 
+
+section.article(class="article--" + article.slug)
+    .article__container 
+        .article__header
+            .article__title 
+                h1.title.title--h1 #{ article.title }
+        .article__main 
+            .article__list 
+                each post in article.list 
+                    .article__post 
+                        figure.article__figure 
+                            img.article__image(src=post.image)
+                        if  article.video !== true
+                            .article__content 
+                                .article__name.title.title--h2(class=( article.slug == 'services' || article.slug == 'services-inner' ? 'title--detail' : '' )) #{ post.title }
+                                if(post.data)
+                                    .article__data
+                                        .title.title--h4.title--detail #{ post.data }
+                                .article__description #{ post.description }
+                                if(post.more)
+                                    .article__actions 
+                                        .article__link.article__link--more 
+                                            +link('post-more', post.more, '/post.html')
+                                else 
+                                    a.article__link.article__link--float(href=post.link)
+                        else 
+                            .article__play 
+                                +svg('play', 80, 80)
+        if( article.more )
+            .article__footer 
+                +link('primary', article.more.label, article.more.link)
+                
+                            

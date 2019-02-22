@@ -1,0 +1,6 @@
+#language.language(aria-expanded="false")
+    each lang, index in language 
+        button.language__item(class="language__item--" + lang.slug, aria-selected= index==0 ? "true" : "false") 
+            .language__icon 
+                +svg(lang.slug.toLowerCase(), 31, 20)
+            .language__label #{ lang.slug }

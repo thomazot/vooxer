@@ -1,0 +1,48 @@
+- var lists = [{
+-        slug: "delivery",
+-        content: "Entrega Garantida ao Cliente"
+-   }, { 
+-        slug: "brazil",
+-        content: "Cobertura nacional de serviços"
+-    }, {
+-        slug: "help",
+-        content: "Suporte a Parceiros com Ações Qualificação e Profissionalização"
+-    }, {
+-        slug: "online",
+-        content: "Todos os processos são on line"
+-    }, {
+-        slug: "images",
+-        content: "qualidade das imagens em 4k"
+-    }, { 
+-        slug: "partner",
+-        content: "Recebimento Garantido ao Parceiro"
+-    }, {
+-        slug: "default",
+-        content: "Preços e Produtos Padronizados"
+-    }, { 
+-        slug: "app",
+-        content: "Rastreamento dos serviços via APP"
+-    }]
+section.diff 
+    .diff__container
+        .diff__main 
+            .diff__content 
+                header.diff__header
+                    .diff__title
+                        h1.title.title--h1 Nossos diferenciais
+                .diff__list
+                    each item in lists
+                        .diff__item( class= "diff__item--" + item.slug )
+                            .diff__icon
+                                if(item.slug == 'default')
+                                    +svg(item.slug, 33, 33)
+                                else 
+                                    +svg(item.slug, 50, 50)
+                            .diff__content #{ item.content }
+            .diff__banner 
+                .diff__image
+                    img(src="/assets/images/banner_diff.jpg", alt="Nosso diferenciais")
+
+                .diff__actions 
+                    +link('map', 'Como chegar na vooxer?', "map")
+
