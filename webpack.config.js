@@ -96,6 +96,12 @@ module.exports = (env,argv) => {
             inject: true,
             templateParameters: index
         }),
+        new htmlWebpackPlugin({
+            filename: 'partners.html',
+            template: "./src/templates/partners.pug",
+            inject: true,
+            templateParameters: index
+        }),
 
     ];
 

@@ -9,8 +9,8 @@ define(['jquery', 'slick-carousel'], function($){
         slidesToShow: 1,
         slidesToScroll: 1,
         mobileFirst: true,
-        prevArrow: `<button type="button" class="slick-prev">${ prev }</button>`,
-        nextArrow: `<button type="button" class="slick-next">${ next }</button>`,
+        prevArrow: `<button type="button" class="slick-prev"><svg><use xlink:href="#prev" /></svg></button>`,
+        nextArrow: `<button type="button" class="slick-next"><svg><use xlink:href="#next" /></svg></button>`,
         responsive: [
             {
                 breakpoint: 568,

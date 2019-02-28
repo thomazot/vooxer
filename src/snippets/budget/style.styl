@@ -1,13 +1,16 @@
 .budget 
+    &.lightbox .lightbox__container
+        width: 760px
+        max-width: 100%
     &__form 
         padding: 0 0 25px
         &-specification 
             padding-top: 30px
-    &__accounts, &__services
+    &__accounts, &__services, &__box
         background: #f2f5ff
         padding: 20px 
         margin: 0 -20px
-    &__services 
+    &__services, &__box
         margin-bottom: -20px
     &__plugins
         margin: 0 -20px -20px
@@ -42,13 +45,108 @@
     &__form-specification
         display: none 
 
+    &__step
+        &[aria-hidden=true]
+            display: none
+    
+    &__list 
+        &-item 
+            padding: 20px 0
+            display: flex 
+            .number 
+                flex: 0 0 30px
+                display: flex 
+                justify-content: center 
+                align-items: center 
+                width: 30px 
+                height: 30px
+                border-radius: 50% 
+                background: color_primary 
+                color: #fff 
+                font-size: 15px
+                font-weight: bold 
+                margin-right: 20px
+            .label
+                display: flex
+                justify-content: flex-start 
+                align-items: center 
+                flex: 1 1 auto 
+                min-width: 0
+                font-size: 15px
+                font-weight: regular 
+                color: #666666
+            .total 
+                display: flex
+                justify-content: flex-end 
+                align-items: center 
+                font-size: 15px
+                font-weight: bold 
+                margin-left: 20px
+                color: #666666
+
+            
+
+            + .budget__list-item
+                border-top: solid 1px #d9e1ff
+        &--total 
+            border-top: solid 1px color_primary
+            .budget 
+                &__list-item
+                    .label, .total
+                        font-weight: bold 
+                        color: color_primary
+
+    &__alert 
+        background: #fff 
+        padding: 15px
+        font-size: 12px
+        font-weight: regular 
+        color: #666666
+    
+    &__actions-two
+        padding: 20px 0
+        .label 
+            font-size: 15px
+            font-weight: bold 
+            color: color_primary
+
+        .buttons 
+            display: flex 
+            justify-content: space-between
+            padding: 15px 0
+            button
+                border: 0
+                height: 40px
+                width: 130px
+                display: flex 
+                justify-content: center 
+                align-items: center 
+                color: #fff
+                font-size: 13px
+                font-weight: semi-bold 
+                &.no 
+                    background: #ff0000
+                &.yes 
+                    background: color_primary
+
+    &__box 
+        .budget__div--checkbox
+            border-bottom: solid 1px color_primary
+            padding-bottom: 10px 
+            margin-bottom: 20px 
+
+.budget__line
+    + .budget__line
+        margin-top: 20px
+        
+
 @media (min-width: 992px)
     .budget 
         &__accounts
             display: flex 
             margin: 0 -50px 
             padding-bottom: 0
-        &__services 
+        &__services, &__box
             padding: 20px 50px 
             margin: 0 -50px -20px
 
@@ -91,3 +189,12 @@
                         flex: 1 1 145px
                     &--largura
                         flex: 1 1 40%
+        &__actions-two
+            display: flex 
+            justify-content: space-between
+            align-items: center
+
+            .buttons 
+                
+                .no 
+                    margin-right: 15px

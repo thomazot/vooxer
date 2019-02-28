@@ -1,0 +1,9 @@
+extends ./template.pug
+
+block vars
+    - var id = "video"
+
+block main 
+    .lightbox__video
+        .lightbox__video-container 
+            video(src="/assets/videos/vooxer.mp4", controls="controls", data-cover)

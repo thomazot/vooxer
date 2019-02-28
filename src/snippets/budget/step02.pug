@@ -1,0 +1,39 @@
+.budget__accounts 
+    .budget__form.budget__create 
+        .budget__header
+            .budget__title 
+                h3.title.title--h3 AINDA NÃO SOU CLIENTE
+        form(action="")
+            .form__item.form__item--small
+                label.form__label(for="bcemail") endereço de e-mail
+                input#bcemail.form__input.form__input--email(type="email", placeholder="endereço de e-mail", name="femail")
+            .form__item.form__item--small 
+                label.form__label(for="bcpass") senha
+                input#bcpass.form__input.form__input--pass(type="password", placeholder="senha", name="fpass")
+            .form__actions 
+                .form__submit
+                    button.button.button--action Criar Conta 
+    .budget__form.budget__login 
+        .budget__header
+            .budget__title 
+                h3.title.title--h3 JÁ SOU CLIENTE
+        form(action="")
+            .form__item.form__item--small
+                label.form__label(for="blemail") endereço de e-mail
+                input#blemail.form__input.form__input--email(type="email", placeholder="endereço de e-mail", name="femail")
+            .form__item.form__item--small 
+                label.form__label(for="blpass") senha
+                input#blpass.form__input.form__input--pass(type="password", placeholder="senha", name="fpass")
+            .form__actions 
+                .form__submit
+                    button.button.button--action-invert Acessar Conta 
+.budget__plugins 
+    .budget__plugins-content
+        .budget__title 
+            h3.title.title--h3.title--line Ou Acesse com: 
+        .budget__content 
+            .budget__socials 
+                a.budget__social-item.budget__social-item--facebook(href="#facebook")
+                    +svg('facebook', 40, 40)   
+                a.budget__social-item.budget__social-item--google(href="#google")
+                    +svg('google', 40, 40)   
