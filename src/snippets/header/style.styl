@@ -42,7 +42,7 @@
         [data-scrolling=true] &
             visibility: hidden
 
-    [data-scrolling=true] &:before
+    [data-scrolling=true] &:before, body:not(.home) &:before
         background: color_primary
         opacity: 1 
         visibility: visible
@@ -90,7 +90,7 @@
             visibility: hidden
         
 
-[data-scrolling=true]
+[data-scrolling=true], body:not(.home)
     .header__content
         { container }
         position: fixed
@@ -116,7 +116,7 @@
         .link--primary 
             transition: none 
         &__actions 
-            [data-scrolling=true] &
+            [data-scrolling=true] &, body:not(.home) &
                 margin-top: 0
                 visibility: visible 
                 .link--primary
@@ -128,6 +128,10 @@
                     animation: logoButton .5s 1 linear
                     &-inverter
                         display: none 
+            
+            body:not(.home) &
+                visibility: visible
+                opacity: 1
                         
     [data-scrolling=true]
         .header__actions 

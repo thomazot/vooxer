@@ -9,6 +9,8 @@ define(['jquery', 'slick-carousel'], function($){
         slidesToShow: 1,
         slidesToScroll: 1,
         mobileFirst: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
         prevArrow: `<button type="button" class="slick-prev"><svg><use xlink:href="#prev" /></svg></button>`,
         nextArrow: `<button type="button" class="slick-next"><svg><use xlink:href="#next" /></svg></button>`,
         responsive: [
@@ -16,21 +18,21 @@ define(['jquery', 'slick-carousel'], function($){
                 breakpoint: 568,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 6,
-                    slidesToScroll: 6,
+                    slidesToScroll: 1,
                 }
             }
         ]

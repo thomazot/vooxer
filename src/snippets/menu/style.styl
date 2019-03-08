@@ -90,7 +90,7 @@
             &:after 
                 transform: rotate3d(0,0,1,-45deg)
 
-[data-scrolling=true] 
+[data-scrolling=true], body:not(.home)
     .menu 
         position: static 
         transform: none 
@@ -109,7 +109,7 @@
         max-width: viewport
         transform: translateX(-50%)
 
-    [data-scrolling=true] 
+    [data-scrolling=true], body:not(.home) 
         .menu
             &__header
                 top: 38px 
