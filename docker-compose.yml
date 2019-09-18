@@ -11,9 +11,9 @@ services:
             - vooxer
             - nginx-proxy
         environment:
-            NGINX_HOST: vooxer.localhost
+            NGINX_HOST: vooxer.thomazot.com.br
             NGINX_PORT: 80
-            VIRTUAL_HOST: vooxer.localhost
+            VIRTUAL_HOST: vooxer.thomazot.com.br
 networks:
     vooxer:
     nginx-proxy:
