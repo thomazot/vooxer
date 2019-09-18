@@ -20,4 +20,4 @@ networks:
     vooxer:
     nginx-proxy:
         external:
-            name: proxy_default
+            name: nginx-net
