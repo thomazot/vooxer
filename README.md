@@ -1,5 +1,4 @@
 # vooxer
-Vooxer
 
 ### Install dependency
 npm instal or yarn
