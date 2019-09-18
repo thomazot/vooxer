@@ -174,7 +174,6 @@ module.exports = (env, argv) => {
                         options: {
                             plugins: (loader) => [
                                 require('autoprefixer')({
-                                    browsers: ['last 2 versions'],
                                     grid: true,
                                 }),
                                 // mode == 'development' ? false : require('cssnano')({
