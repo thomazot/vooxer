@@ -46,6 +46,6 @@
         "jquery": "^3.3.1",
         "slick-carousel": "^1.8.1",
         "sumoselect": "^3.0.5",
-        "swiper": "^4.4.6"
+        "swiper": "^6.5.1"
     }
 }
